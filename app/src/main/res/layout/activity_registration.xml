@@ -21,9 +21,9 @@
 
     <EditText
         android:id="@+id/editTextUsername"
-        android:layout_width="292dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="240dp"
+        android:layout_width="285dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="244dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:hint=" Username"
@@ -34,14 +34,14 @@
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextEmail"
-        android:layout_width="283dp"
-        android:layout_height="47dp"
+        android:layout_width="282dp"
+        android:layout_height="49dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_email_24"
@@ -108,45 +108,21 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="384dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="4dp"
-        android:text="     Aware Hospital"
+        android:layout_width="341dp"
+        android:layout_height="55dp"
+
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+
+        android:text="Aware Hospital"
         android:textColor="@color/white"
         android:textColorHighlight="@color/white"
         android:textSize="40sp"
-        android:textStyle="bold|italic"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editTextUsername"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="306dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="8dp"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:text="     Already have an account..?"
-        android:textColor="@color/white"
-        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSubmit" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="137dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
-        android:text="SKIP"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

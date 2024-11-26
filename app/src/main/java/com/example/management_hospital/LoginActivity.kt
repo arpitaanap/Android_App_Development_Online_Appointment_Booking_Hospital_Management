@@ -1,11 +1,11 @@
-package com.example.management_hospital;
-
+package com.example.management_hospital
 
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -18,6 +18,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var loginButton: Button
     private lateinit var auth: FirebaseAuth
     private lateinit var database: DatabaseReference
+    private lateinit var noAccountText: TextView // Reference to the "Don't have an account?" TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +32,7 @@ class LoginActivity : AppCompatActivity() {
         email = findViewById(R.id.username) // Replace username field with email
         password = findViewById(R.id.password)
         loginButton = findViewById(R.id.submit_btn)
+        noAccountText = findViewById(R.id.no_account_text) // Find the TextView
 
         // Set login button click listener
         loginButton.setOnClickListener {
@@ -41,6 +43,13 @@ class LoginActivity : AppCompatActivity() {
             if (validateInputs(emailInput, passwordInput)) {
                 loginUser(emailInput, passwordInput)
             }
+        }
+
+        // Set "Don't have an account?" TextView click listener
+        noAccountText.setOnClickListener {
+            // Navigate to Registration Activity
+            val intent = Intent(this, RegistrationActivity::class.java) // Replace with your RegistrationActivity class
+            startActivity(intent)
         }
     }
 

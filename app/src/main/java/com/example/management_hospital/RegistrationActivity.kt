@@ -1,5 +1,6 @@
-package com.example.management_hospital;
+package com.example.management_hospital
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
@@ -79,7 +80,11 @@ class RegistrationActivity : AppCompatActivity() {
                                         "Registration successful!",
                                         Toast.LENGTH_SHORT
                                     ).show()
-                                    // Proceed to next screen or activity
+
+                                    // Navigate to LoginActivity after successful registration
+                                    val intent = Intent(this, LoginActivity::class.java)
+                                    startActivity(intent)
+                                    finish() // Close the current registration activity
                                 } else {
                                     Toast.makeText(
                                         this,

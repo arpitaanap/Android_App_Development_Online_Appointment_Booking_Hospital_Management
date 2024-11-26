@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
 
-</selector>
+    <!-- Rounded corners -->
+    <corners android:radius="16dp" />
+
+    <!-- Solid fill color -->
+    <solid android:color="@color/light_gray_f5" />
+
+    <!-- Optional border (stroke) -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/black" />
+
+    <!-- Optional shadow effect (for older devices, use elevation on Views) -->
+    <padding
+        android:top="4dp"
+        android:left="4dp"
+        android:bottom="4dp"
+        android:right="4dp" />
+</shape>

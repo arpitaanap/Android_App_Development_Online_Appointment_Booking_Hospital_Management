@@ -9,28 +9,24 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
 
     // Declare views
-    private lateinit var btnSignUp: Button
-    private lateinit var btnLogin: Button
-    private lateinit var buttonDoctorLogin: TextView
+    private lateinit var buttonDoctorLogin: Button
+    private lateinit var PatientBtn: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         // Initialize views
-        btnSignUp = findViewById(R.id.buttonSignUp)
-        btnLogin = findViewById(R.id.buttonLogin)
-        buttonDoctorLogin = findViewById(R.id.buttonDoctorLogin)
+        buttonDoctorLogin = findViewById(R.id.doctor_login_btn)
+        PatientBtn = findViewById(R.id.patient_login_btn)
+
 
         // Set click listener for Sign Up button
-        btnSignUp.setOnClickListener {
-            // Navigate to Registration Activity
-            val intent = Intent(this, RegistrationActivity::class.java)
-            startActivity(intent)
-        }
+
 
         // Set click listener for Log In button
-        btnLogin.setOnClickListener {
+        PatientBtn.setOnClickListener {
             // Navigate to Login Activity
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)

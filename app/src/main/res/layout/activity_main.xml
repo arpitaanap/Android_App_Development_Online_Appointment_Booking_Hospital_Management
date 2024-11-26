@@ -3,84 +3,100 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/arpita"
-    android:padding="16dp">
+    android:background="@color/white">
+
+    <!-- Enhanced TextView -->
+
+    <!-- Doctor and Patient Layout -->
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="288dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="8dp"
-        android:text="          Appoint your Doctor"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="384dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="208dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="  Doctors Appointment"
-        android:textColor="@color/black"
-        android:textSize="32dp"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="116dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginStart="48dp"
-        android:backgroundTint="@color/black"
-        android:text="Log In"
-        android:textColor="@color/colorWhite"
-        android:textSize="19sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/buttonSignUp"
-        android:layout_width="116dp"
-        android:layout_height="44dp"
+        android:layout_width="353dp"
+        android:layout_height="77dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="92dp"
-        android:backgroundTint="@color/black"
-        android:text="Sign Up"
-        android:textColor="@color/colorWhite"
-        android:textSize="19sp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/textview_background"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:shadowColor="#808080"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text="AWARE HOSPITAL"
+        android:textColor="@color/black"
+        android:textSize="36sp"
         android:textStyle="bold|italic"
-        app:layout_constraintStart_toEndOf="@+id/buttonLogin"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/buttonDoctorLogin"
-        android:layout_width="200dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/black"
-        android:text="Doctor Login"
-        android:textColor="@color/colorWhite"
-        android:textSize="16sp"
-        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/doctor_patient_layout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/doctor_patient_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSignUp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.581">
 
+        <!-- Doctor Section -->
 
+        <!-- Patient Section -->
+
+        <LinearLayout
+            android:layout_width="159dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/textview_background"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Doctor Icon"
+                android:src="@drawable/doctorlogo" />
+
+            <Button
+                android:id="@+id/doctor_login_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:backgroundTint="@color/black"
+                android:text="Login as Doctor"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="159dp"
+            android:layout_height="214dp"
+            android:background="@drawable/textview_background"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Patient Icon"
+                android:src="@drawable/paitent" />
+
+            <Button
+                android:id="@+id/patient_login_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:text="Login as Patient"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

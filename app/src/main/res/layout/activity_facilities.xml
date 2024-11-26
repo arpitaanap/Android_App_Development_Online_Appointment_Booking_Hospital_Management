@@ -35,8 +35,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="@drawable/rounded_background"
+
         android:padding="16dp"
+        android:background="@drawable/rounded_background"
         android:text="Emergency Services"
         android:textColor="@color/black"
         android:textSize="20sp"
